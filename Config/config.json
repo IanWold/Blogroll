@@ -1,16 +1,29 @@
 {
     "Feeds": [
         "https://cultureandcommunication.org/galloway/feed",
-        "https://benhoyt.com/writings/rss.xml",
+        "https://benhoyt.com/writings/rss.xml"
+    ]
+    "NotUsedFeeds": [
+        "https://www.benkuhn.net/index.xml",
+        "https://nullprogram.com/feed/",
         "https://overreacted.io/rss.xml",
         "https://lemire.me/blog/feed/",
+        "https://world.hey.com/dhh/feed.atom",
         "https://ericnormand.me/rss.xml",
         "https://gojko.net/feed.xml",
+        "https://jvns.ca/atom.xml",
         "https://khalidabuhakmeh.com/feed.xml",
         "https://surfingcomplexity.blog/feed/",
         "https://www.logicmatters.net/feed/",
         "https://www.lucasfcosta.com/feed.xml",
+        "https://blog.maartenballiauw.be/feed.xml",
         "https://feeds.feedburner.com/martinkl",
-        "https://matt-rickard.com/rss"
+        "https://matt-rickard.com/rss",
+        "https://mattwarren.org/atom.xml",
+        "https://www.michaelnygard.com/atom.xml",
+        "https://renegadeotter.com/feed.xml",
+        "https://staysaasy.com/feed.xml",
+        "https://taylor.town/feed.xml",
+        "https://tomcritchlow.com/feed"
     ]
 }
