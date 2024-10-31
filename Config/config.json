@@ -7,7 +7,7 @@
             "Subtitle": "This page has all the blogs I follow and their latest posts. It's generated and hosted on <a href=\"https://github.com/IanWold/Blogroll\">GitHub</a>, updating each morning."
         },
         "Latest": {
-            "Title": "Posts Feed",
+            "Title": "Latest Posts",
             "Subtitle": "Here's the latest 100 posts from the blogs on my roll."
         }
     },
