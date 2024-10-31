@@ -15,10 +15,10 @@
         "https://www.logicmatters.net/feed/",
         "https://www.lucasfcosta.com/feed.xml",
         "https://blog.maartenballiauw.be/feed.xml",
-        "https://feeds.feedburner.com/martinkl"
+        "https://feeds.feedburner.com/martinkl",
+        "https://matt-rickard.com/rss"
     ],
     "NotUsedFeeds": [
-        "https://matt-rickard.com/rss",
         "https://mattwarren.org/atom.xml",
         "https://www.michaelnygard.com/atom.xml",
         "https://renegadeotter.com/feed.xml",
