@@ -8,10 +8,10 @@
         "https://lemire.me/blog/feed/",
         "https://world.hey.com/dhh/feed.atom",
         "https://ericnormand.me/rss.xml",
-        "https://gojko.net/feed.xml"
+        "https://gojko.net/feed.xml",
+        "https://jvns.ca/atom.xml"
     ],
     "NotUsedFeeds": [
-        "https://jvns.ca/atom.xml",
         "https://khalidabuhakmeh.com/feed.xml",
         "https://surfingcomplexity.blog/feed/",
         "https://www.logicmatters.net/feed/",
