@@ -60,7 +60,7 @@ var blogs =
             f.Description?.Text ?? string.Empty,
             f.Items
                 .Where(i => i.Links.Count != 0)
-                .Select(i => new Post(i.Links.First().Uri.ToString(), i.Title.Text, i.PublishDate.UtcDateTime.ToString("dd MMMM yyyy"), f.Title.Text, url))
+                .Select(i => new Post(i.Links.First().Uri.ToString(), i.Title.Text, i.PublishDate.UtcDateTime.ToString("dd MMMM yyyy"), i.PublishDate.UtcDateTime, f.Title.Text, url))
         );
     })
     .OrderBy(b => b.Name);
@@ -68,23 +68,25 @@ var blogs =
 var posts =
     blogs
     .SelectMany(b => b.Posts)
-    .OrderByDescending(p => p.Date)
-    .Take(100);
+    .OrderByDescending(p => p.RawDate)
+    .Take(config.PostsToShow);
 
 new MetalsharpProject()
 .AddOutput(new MetalsharpFile(string.Empty, "index.html", new Dictionary<string, object>()
 {
     ["template"] = "blogroll",
     ["blogs"] = blogs,
-    ["title"] = "Hello, I'm <a href=\"https://ian.wold.guru\">Ian</a>! This is my blogroll.",
-    ["subtitle"] = "This site is generated and hosted on <a href=\"https://github.com/IanWold/Blogroll\">GitHub</a>, updating each morning."
+    ["title"] = config.Pages.Blogroll.Title,
+    ["subtitle"] = config.Pages.Blogroll.Subtitle,
+    ["heading"] = config.Title
 }))
-.AddOutput(new MetalsharpFile(string.Empty, "feed.html", new Dictionary<string, object>()
+.AddOutput(new MetalsharpFile(string.Empty, "latest.html", new Dictionary<string, object>()
 {
     ["template"] = "feed",
     ["posts"] = posts,
-    ["title"] = "Posts Feed",
-    ["subtitle"] = "Here's the latest 100 posts from the blogs on my roll."
+    ["title"] = config.Pages.Latest.Title,
+    ["subtitle"] = config.Pages.Latest.Subtitle,
+    ["heading"] = config.Title
 }))
 .UseLiquidTemplates("Templates")
 .AddOutput("Static", @".\")
@@ -94,6 +96,8 @@ new MetalsharpProject()
     ClearOutputDirectory = true
 });
 
-record Config(string[] Feeds);
-record Post(string Url, string Title, string Date, string Author, string AuthorUrl);
+record PageConfig(string Title, string Subtitle);
+record PagesConfig(PageConfig Blogroll, PageConfig Latest);
+record Config(string Title, int PostsToShow, PagesConfig Pages, string[] Feeds);
+record Post(string Url, string Title, string Date, DateTime RawDate, string Author, string AuthorUrl);
 record Blog(string Url, string Name, string Description, IEnumerable<Post> Posts);
