@@ -1,4 +1,16 @@
 {
+    "Title": "Ian's Blogroll"
+    "PostsToShow": 100,
+    "Pages": {
+        "Blogroll": {
+            "Title": "Hello, I'm <a href=\"https://ian.wold.guru\">Ian</a>! This is my blogroll.",
+            "Subtitle": "This page has all the blogs I follow and their latest posts. It's generated and hosted on <a href=\"https://github.com/IanWold/Blogroll\">GitHub</a>, updating each morning."
+        },
+        "Latest": {
+            "Title": "Posts Feed",
+            "Subtitle": "Here's the latest 100 posts from the blogs on my roll."
+        }
+    },
     "Feeds": [
         "https://cultureandcommunication.org/galloway/feed",
         "https://benhoyt.com/writings/rss.xml",
