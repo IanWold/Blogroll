@@ -6,10 +6,10 @@
         "https://nullprogram.com/feed/",
         "https://overreacted.io/rss.xml",
         "https://lemire.me/blog/feed/",
-        "https://world.hey.com/dhh/feed.atom"
+        "https://world.hey.com/dhh/feed.atom",
+        "https://ericnormand.me/rss.xml"
     ],
     "NotUsedFeeds": [
-        "https://ericnormand.me/rss.xml",
         "https://gojko.net/feed.xml",
         "https://jvns.ca/atom.xml",
         "https://khalidabuhakmeh.com/feed.xml",
