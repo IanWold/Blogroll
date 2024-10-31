@@ -17,11 +17,11 @@
         "https://blog.maartenballiauw.be/feed.xml",
         "https://feeds.feedburner.com/martinkl",
         "https://mattwarren.org/atom.xml",
-        "https://www.michaelnygard.com/atom.xml"
+        "https://www.michaelnygard.com/atom.xml",
+        "https://renegadeotter.com/feed.xml"
     ],
     "NotUsedFeeds": [
         "https://matt-rickard.com/rss",
-        "https://renegadeotter.com/feed.xml",
         "https://staysaasy.com/feed.xml",
         "https://taylor.town/feed.xml",
         "https://tomcritchlow.com/feed"
