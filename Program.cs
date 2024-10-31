@@ -50,7 +50,7 @@ using (var client = new HttpClient())
 Console.WriteLine("Finished downloading rss feeds");
 
 var blogs = feeds.Select(f => {
-    var url = f.Links.First(l => !l.Uri.ToString().Contains("feed")).Uri.ToString();
+    var url = f.Links.First(l => !l.Uri.ToString().Contains("feed") && !l.Uri.ToString().Contains("xml") && !l.Uri.ToString().Contains("rss")).Uri.ToString();
     return new Blog(
         url,
         f.Title.Text,
@@ -64,7 +64,7 @@ var blogs = feeds.Select(f => {
 var posts =
     blogs
     .SelectMany(b => b.Posts)
-    .OrderBy(p => p.Date)
+    .OrderByDescending(p => p.Date)
     .Take(100);
 
 new MetalsharpProject()
