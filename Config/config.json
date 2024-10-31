@@ -12,10 +12,10 @@
         "https://jvns.ca/atom.xml",
         "https://khalidabuhakmeh.com/feed.xml",
         "https://surfingcomplexity.blog/feed/",
-        "https://www.logicmatters.net/feed/"
+        "https://www.logicmatters.net/feed/",
+        "https://www.lucasfcosta.com/feed.xml"
     ],
     "NotUsedFeeds": [
-        "https://www.lucasfcosta.com/feed.xml",
         "https://blog.maartenballiauw.be/feed.xml",
         "https://feeds.feedburner.com/martinkl",
         "https://matt-rickard.com/rss",
