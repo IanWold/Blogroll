@@ -11,10 +11,10 @@
         "https://gojko.net/feed.xml",
         "https://jvns.ca/atom.xml",
         "https://khalidabuhakmeh.com/feed.xml",
-        "https://surfingcomplexity.blog/feed/"
+        "https://surfingcomplexity.blog/feed/",
+        "https://www.logicmatters.net/feed/"
     ],
     "NotUsedFeeds": [
-        "https://www.logicmatters.net/feed/",
         "https://www.lucasfcosta.com/feed.xml",
         "https://blog.maartenballiauw.be/feed.xml",
         "https://feeds.feedburner.com/martinkl",
