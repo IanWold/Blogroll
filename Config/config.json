@@ -3,10 +3,10 @@
         "https://cultureandcommunication.org/galloway/feed",
         "https://benhoyt.com/writings/rss.xml",
         "https://www.benkuhn.net/index.xml",
-        "https://nullprogram.com/feed/"
+        "https://nullprogram.com/feed/",
+        "https://overreacted.io/rss.xml"
     ],
     "NotUsedFeeds": [
-        "https://overreacted.io/rss.xml",
         "https://lemire.me/blog/feed/",
         "https://world.hey.com/dhh/feed.atom",
         "https://ericnormand.me/rss.xml",
