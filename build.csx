@@ -53,17 +53,21 @@ using (var client = new HttpClient())
 
 Console.WriteLine("Finished downloading rss feeds");
 
-var blogs = feeds.Select(f => {
-    var url = f.Links.First(l => !l.Uri.ToString().Contains("feed") && !l.Uri.ToString().Contains("xml") && !l.Uri.ToString().Contains("rss")).Uri.ToString();
-    return new Blog(
-        url,
-        f.Title.Text,
-        f.Description?.Text ?? string.Empty,
-        f.Items
-            .Where(i => i.Links.Count != 0)
-            .Select(i => new Post(i.Links.First().Uri.ToString(), i.Title.Text, i.PublishDate.UtcDateTime.ToString("dd MMMM yyyy"), f.Title.Text, url))
-    );
-});
+var blogs =
+    feeds
+    .Select(f =>
+    {
+        var url = f.Links.First(l => !l.Uri.ToString().Contains("feed") && !l.Uri.ToString().Contains("xml") && !l.Uri.ToString().Contains("rss")).Uri.ToString();
+        return new Blog(
+            url,
+            f.Title.Text,
+            f.Description?.Text ?? string.Empty,
+            f.Items
+                .Where(i => i.Links.Count != 0)
+                .Select(i => new Post(i.Links.First().Uri.ToString(), i.Title.Text, i.PublishDate.UtcDateTime.ToString("dd MMMM yyyy"), f.Title.Text, url))
+        );
+    })
+    .OrderBy(b => b.Name);
 
 var posts =
     blogs
