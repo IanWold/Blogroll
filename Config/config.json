@@ -4,10 +4,10 @@
         "https://benhoyt.com/writings/rss.xml",
         "https://www.benkuhn.net/index.xml",
         "https://nullprogram.com/feed/",
-        "https://overreacted.io/rss.xml"
+        "https://overreacted.io/rss.xml",
+        "https://lemire.me/blog/feed/"
     ],
     "NotUsedFeeds": [
-        "https://lemire.me/blog/feed/",
         "https://world.hey.com/dhh/feed.atom",
         "https://ericnormand.me/rss.xml",
         "https://gojko.net/feed.xml",
