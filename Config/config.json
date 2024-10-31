@@ -19,11 +19,11 @@
         "https://mattwarren.org/atom.xml",
         "https://www.michaelnygard.com/atom.xml",
         "https://renegadeotter.com/feed.xml",
-        "https://staysaasy.com/feed.xml"
+        "https://staysaasy.com/feed.xml",
+        "https://taylor.town/feed.xml"
     ],
     "NotUsedFeeds": [
         "https://matt-rickard.com/rss",
-        "https://taylor.town/feed.xml",
         "https://tomcritchlow.com/feed"
     ]
 }
