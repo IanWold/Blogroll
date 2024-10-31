@@ -1,10 +1,10 @@
 {
     "Feeds": [
         "https://cultureandcommunication.org/galloway/feed",
-        "https://benhoyt.com/writings/rss.xml"
+        "https://benhoyt.com/writings/rss.xml",
+        "https://www.benkuhn.net/index.xml"
     ],
     "NotUsedFeeds": [
-        "https://www.benkuhn.net/index.xml",
         "https://nullprogram.com/feed/",
         "https://overreacted.io/rss.xml",
         "https://lemire.me/blog/feed/",
