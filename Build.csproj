@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="config.json"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
     <None Update="Config\**\*"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
     <None Update="Static\**\*"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
     <None Update="Templates\**\*"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
