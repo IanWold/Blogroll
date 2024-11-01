@@ -1,6 +1,7 @@
 {
     "Title": "Ian's Blogroll",
     "PostsToShow": 100,
+    "CssUrl": "./mvp.css",
     "Pages": {
         "Blogroll": {
             "Title": "Hello, I'm <a href=\"https://ian.wold.guru\">Ian</a>! This is my blogroll.",

@@ -14,7 +14,7 @@ using System.Xml;
 using Metalsharp;
 using Metalsharp.LiquidTemplates;
 
-var config = JsonSerializer.Deserialize<Config>(await File.ReadAllTextAsync("Config/config.json"));
+var config = JsonSerializer.Deserialize<Config>(await File.ReadAllTextAsync("config.json"));
 var feeds = new List<SyndicationFeed>();
 
 using (var client = new HttpClient())
@@ -76,32 +76,34 @@ var posts =
     .Take(config.PostsToShow);
 
 new MetalsharpProject()
-.AddOutput(new MetalsharpFile(string.Empty, "index.html", new Dictionary<string, object>()
-{
-    ["template"] = "blogroll",
-    ["blogs"] = blogs,
-    ["title"] = config.Pages.Blogroll.Title,
-    ["subtitle"] = config.Pages.Blogroll.Subtitle,
-    ["heading"] = config.Title
-}))
-.AddOutput(new MetalsharpFile(string.Empty, "latest.html", new Dictionary<string, object>()
-{
-    ["template"] = "feed",
-    ["posts"] = posts,
-    ["title"] = config.Pages.Latest.Title,
-    ["subtitle"] = config.Pages.Latest.Subtitle,
-    ["heading"] = config.Title
-}))
-.UseLiquidTemplates("Templates")
-.AddOutput("Static", @".\")
-.Build(new BuildOptions()
-{
-    OutputDirectory = "output",
-    ClearOutputDirectory = true
-});
+    .AddOutput(new MetalsharpFile(string.Empty, "index.html", new Dictionary<string, object>()
+    {
+        ["template"] = "blogroll",
+        ["blogs"] = blogs,
+        ["title"] = config.Pages.Blogroll.Title,
+        ["subtitle"] = config.Pages.Blogroll.Subtitle,
+        ["heading"] = config.Title,
+        ["cssUrl"] = config.CssUrl
+    }))
+    .AddOutput(new MetalsharpFile(string.Empty, "latest.html", new Dictionary<string, object>()
+    {
+        ["template"] = "feed",
+        ["posts"] = posts,
+        ["title"] = config.Pages.Latest.Title,
+        ["subtitle"] = config.Pages.Latest.Subtitle,
+        ["heading"] = config.Title,
+        ["cssUrl"] = config.CssUrl
+    }))
+    .UseLiquidTemplates("Templates")
+    .AddOutput("Static", @".\")
+    .Build(new BuildOptions()
+    {
+        OutputDirectory = "output",
+        ClearOutputDirectory = true
+    });
 
 record PageConfig(string Title, string Subtitle);
 record PagesConfig(PageConfig Blogroll, PageConfig Latest);
-record Config(string Title, int PostsToShow, PagesConfig Pages, string[] Feeds);
+record Config(string Title, int PostsToShow, string CssUrl, PagesConfig Pages, string[] Feeds);
 record Post(string Url, string Title, string Date, DateTime RawDate, string Author, string AuthorUrl);
 record Blog(string Url, string Name, string Description, IEnumerable<Post> Posts);
