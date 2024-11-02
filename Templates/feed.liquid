@@ -1,6 +1,35 @@
+<section id="grug" style="display: none;">
+    <blockquote>
+        <div id="grug-quote"></div>
+        <footer>
+            <i>- Daily Grug <div id="grug-date" style="display-inline"></div> (from <a href="http://grugbrain.dev">The Grug Brained Developer</a>)</i>
+        </footer>
+    </blockquote>
+</section>
+
 {% for post in posts %}
     <figure>
         <a href="{{ post.Url }}"><h2 style="margin-bottom: 0">{{ post.Title }}</h2></a>
         <figcaption><i>{{ post.Date }}</i> - <a href="{{ post.AuthorUrl }}">{{ post.Author }}</a></figcaption>
     </figure>
 {% endfor %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        try {
+            const response = await fetch("https://dailygrug-production.up.railway.app/");
+            if (response.ok) {
+                const lines = (await response.text()).split('\n');
+                
+                const date = lines[1];
+                const grug = lines.slice(2).join('\n');
+                
+                document.getElementById('grug-quote').textContent = grug;
+                document.getElementById('grug-date').textContent = date;
+                document.getElementById('grug').style.display = "flex";
+            }
+        } catch (e) {
+            console.error("Failed to fetch Daily Grug:", e);
+        }
+    });
+</script>
