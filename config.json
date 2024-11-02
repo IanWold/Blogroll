@@ -1,11 +1,11 @@
 {
-    "Title": "My Blogroll",
+    "Title": "Ian's Blogroll",
     "PostsToShow": 100,
     "CssUrl": "https://unpkg.com/mvp.css",
     "Pages": {
         "Blogroll": {
-            "Title": "Welcome to my Blogroll!",
-            "Subtitle": "This page has all the blogs I follow and their latest posts."
+            "Title": "Hello, I'm <a href=\"https://ian.wold.guru\">Ian</a>! This is my blogroll.",
+            "Subtitle": "This page has all the blogs I follow and their latest posts. It's generated and hosted on <a href=\"https://github.com/IanWold/Blogroll\">GitHub</a>, updating each morning."
         },
         "Latest": {
             "Title": "Latest Posts",
@@ -13,6 +13,27 @@
         }
     },
     "Feeds": [
+        "https://cultureandcommunication.org/galloway/feed",
+        "https://benhoyt.com/writings/rss.xml",
+        "https://www.benkuhn.net/index.xml",
+        "https://nullprogram.com/feed/",
+        "https://overreacted.io/rss.xml",
+        "https://lemire.me/blog/feed/",
+        "https://world.hey.com/dhh/feed.atom",
+        "https://ericnormand.me/rss.xml",
+        "https://gojko.net/feed.xml",
+        "https://jvns.ca/atom.xml",
+        "https://khalidabuhakmeh.com/feed.xml",
+        "https://surfingcomplexity.blog/feed/",
+        "https://www.logicmatters.net/feed/",
+        "https://www.lucasfcosta.com/feed.xml",
+        "https://blog.maartenballiauw.be/feed.xml",
+        "https://feeds.feedburner.com/martinkl",
+        "https://mattwarren.org/atom.xml",
+        "https://www.michaelnygard.com/atom.xml",
+        "https://renegadeotter.com/feed.xml",
+        "https://staysaasy.com/feed.xml",
+        "https://taylor.town/feed.xml",
         "https://ian.wold.guru/feed.xml"
     ]
 }
