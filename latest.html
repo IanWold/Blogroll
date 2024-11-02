@@ -27,7 +27,16 @@
         </header>
 
         <main>
-            
+            <section id="grug" style="display: none;">
+    <blockquote>
+        <div id="grug-quote"></div>
+        <footer>
+            <i>- Daily Grug <div id="grug-date" style="display-inline"></div> (from <a href="http://grugbrain.dev">The Grug Brained Developer</a>)</i>
+        </footer>
+    </blockquote>
+</section>
+
+
     <figure>
         <a href="https://lemire.me/blog/2024/11/02/having-fun-with-modern-c/"><h2 style="margin-bottom: 0">Having fun with modern C++</h2></a>
         <figcaption><i>02 November 2024</i> - <a href="https://lemire.me/blog">Daniel Lemire's blog</a></figcaption>
@@ -528,6 +537,26 @@
         <figcaption><i>18 August 2024</i> - <a href="https://taylor.town/">taylor.town</a></figcaption>
     </figure>
 
+
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        try {
+            const response = await fetch("https://dailygrug-production.up.railway.app/");
+            if (response.ok) {
+                const lines = (await response.text()).split('\n');
+                
+                const date = lines[1];
+                const grug = lines.slice(2).join('\n');
+                
+                document.getElementById('grug-quote').textContent = grug;
+                document.getElementById('grug-date').textContent = date;
+                document.getElementById('grug').style.display = "flex";
+            }
+        } catch (e) {
+            console.error("Failed to fetch Daily Grug:", e);
+        }
+    });
+</script>
         </main>
     </body>
 </html>
