@@ -1,6 +1,6 @@
 #! "net8.0"
-#r "nuget: Metalsharp, 0.9.0-rc.5"
-#r "nuget: Metalsharp.LiquidTemplates, 0.9.0-rc-3"
+#r "nuget: Metalsharp, 0.9.0-rc.6"
+#r "nuget: Metalsharp.LiquidTemplates, 0.9.0-rc.5"
 #r "nuget: System.ServiceModel.Syndication, 8.0.0"
 using System;
 using System.Collections.Generic;
@@ -75,7 +75,11 @@ var posts =
     .OrderByDescending(p => p.RawDate)
     .Take(config.PostsToShow);
 
-new MetalsharpProject()
+new MetalsharpProject(new MetalsharpOptions()
+{
+    OutputDirectory = "output",
+    ClearOutputDirectory = true
+})
     .AddOutput(new MetalsharpFile(string.Empty, "index.html", new Dictionary<string, object>()
     {
         ["template"] = "blogroll",
@@ -96,11 +100,7 @@ new MetalsharpProject()
     }))
     .UseLiquidTemplates("Templates")
     .AddOutput("Static", @".\")
-    .Build(new BuildOptions()
-    {
-        OutputDirectory = "output",
-        ClearOutputDirectory = true
-    });
+    .Build();
 
 record PageConfig(string Title, string Subtitle);
 record PagesConfig(PageConfig Blogroll, PageConfig Latest);
