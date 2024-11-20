@@ -1,6 +1,6 @@
 {
     "Title": "Ian's Blogroll",
-    "PostsToShow": 100,
+    "PostsToShow": 25,
     "CssUrl": "https://unpkg.com/mvp.css",
     "Pages": {
         "Blogroll": {
@@ -9,7 +9,7 @@
         },
         "Latest": {
             "Title": "Latest Posts",
-            "Subtitle": "Here's the latest 100 posts from the blogs on my roll."
+            "Subtitle": "Here's the latest 25 posts from the blogs on my roll."
         }
     },
     "Feeds": [
