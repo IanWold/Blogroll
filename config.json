@@ -36,6 +36,7 @@
         "https://taylor.town/feed.xml",
         "https://ian.wold.guru/feed.xml",
         "https://nietras.com/feed.xml",
-        "https://andrewwillette.com/blog/rss"
+        "https://andrewwillette.com/blog/rss",
+        "https://martinfowler.com/feed.atom"
     ]
 }
