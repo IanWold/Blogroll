@@ -37,6 +37,7 @@
         "https://ian.wold.guru/feed.xml",
         "https://nietras.com/feed.xml",
         "https://andrewwillette.com/blog/rss",
-        "https://martinfowler.com/feed.atom"
+        "https://martinfowler.com/feed.atom",
+        "https://www.dylanamartin.com/blog.xml"
     ]
 }
