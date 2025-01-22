@@ -37,6 +37,7 @@
         "https://nietras.com/feed.xml",
         "https://andrewwillette.com/blog/rss",
         "https://martinfowler.com/feed.atom",
-        "https://www.dylanamartin.com/blog.xml"
+        "https://www.dylanamartin.com/blog.xml",
+        "https://bernsteinbear.com/feed.xml"
     ]
 }
