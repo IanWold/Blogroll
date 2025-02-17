@@ -39,6 +39,7 @@
         "https://martinfowler.com/feed.atom",
         "https://www.dylanamartin.com/blog.xml",
         "https://bernsteinbear.com/feed.xml",
-        "https://www.ben-morris.com/rss.xml"
+        "https://www.ben-morris.com/rss.xml",
+        "https://michael-hudson.com/feed/"
     ]
 }
