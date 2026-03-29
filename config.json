@@ -41,7 +41,8 @@
         "https://www.ben-morris.com/rss.xml",
         "https://michael-hudson.com/feed/",
         "https://brandur.org/articles.atom",
-        "https://billmitchell.org/blog/?feed=rss2"
+        "https://billmitchell.org/blog/?feed=rss2",
+        "https://golem.ph.utexas.edu/category/atom10.xml"
     ]
 }
 
